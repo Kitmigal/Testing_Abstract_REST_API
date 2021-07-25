@@ -38,7 +38,6 @@ class reqHelper {
 
     static SendPutReq(Map message) {
         HttpPut httpPut = new HttpPut("http://httpbin.org/put");
-        println(httpPut.method)
         httpPut.setEntity(new StringEntity(new String(JsonOutput.toJson(message).getBytes(StandardCharsets.UTF_8), StandardCharsets.UTF_8)));
         httpPut.setHeader("Content-type", "application/json;charset=UTF-8");
         LOG.info(httpPut.getMethod() as String)

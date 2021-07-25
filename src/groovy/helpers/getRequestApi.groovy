@@ -34,10 +34,6 @@ class getRequestApi {
                 break
             case 'min': mapValue.defaultValue.substring(0, mapValue.min)
                 break
-            case 'max+': mapValue.defaultValue.padLeft(mapValue.max + 1, '1') //
-                break
-            case 'min-': (mapValue.min == 1) ? null : (mapValue.defaultValue.substring(0, mapValue.min - 1))
-                break
             default: mapValue.defaultValue
         }
     }
